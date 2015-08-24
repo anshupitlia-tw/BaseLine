@@ -7,7 +7,7 @@ public class Goods {
     boolean isImported;
     int quantity;
     boolean isTaxable;
-
+    float salesTax;
     public Goods(String nameOfGood, float pricePerUnit, int quantity, boolean isImported, boolean isTaxable) {
         this.nameOfGood = nameOfGood;
         this.pricePerUnit = pricePerUnit;
@@ -33,7 +33,9 @@ public class Goods {
             else {
                 tax = this.pricePerUnit * 10 / 100;
             }
+
             //call method for rounding this off.
+            //this.salesTax = roundOff(tax)
         }
 
     }
