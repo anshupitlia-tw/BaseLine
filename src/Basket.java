@@ -20,8 +20,14 @@ public class Basket {
         this.basket.clear();
     }
     public void display(){
+        float totalSalesTax =0.0f, totalAmount = 0.0f;
         for (Goods eachGood: basket){
+            totalAmount += eachGood.pricePerUnit+eachGood.salesTax;
+            totalSalesTax+=eachGood.salesTax;
             System.out.println(eachGood.quantity + " " + eachGood.nameOfGood + ":" + eachGood.pricePerUnit+eachGood.salesTax);
         }
+        System.out.println("Sales Tax:"+ totalSalesTax);
+        System.out.println("Total:"+ totalAmount);
+
     }
 }
