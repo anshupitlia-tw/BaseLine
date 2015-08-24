@@ -17,17 +17,19 @@ public class MainClass {
         while (!(eachLine=br.readLine()).equals("That is it")){
             if (eachLine.contains("Input")){
                 baskets.add(basket);
-                basket.clear();
+                basket.clear(); // There is some problem here. Everytime the reference is getting cleared.
                 continue;
             }
             else if (!eachLine.equals("")){
                Goods good = processInputLine(eachLine);
-                    basket.addGood(good);
+                basket.addGood(good);
             }
         }
         //give output
-
+        int i = 1;
+        System.out.println("OUTPUT");
         for (Basket eachBasket : baskets){
+            System.out.println("OUTPUT "+i++);
             eachBasket.display();
         }
     }

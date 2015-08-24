@@ -33,7 +33,6 @@ public class Goods {
             else {
                 tax = this.pricePerUnit * 10 / 100;
             }
-
             //call method for rounding this off.
             this.salesTax = MyMath.roundOff(tax);
         }
