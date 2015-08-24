@@ -15,9 +15,7 @@ public class Goods {
         this.isImported = isImported;
         this.isTaxable = isTaxable;
     }
-   public Goods(){
 
-   }
     public boolean isImported() {
         return isImported;
     }
@@ -37,7 +35,7 @@ public class Goods {
             }
 
             //call method for rounding this off.
-            //this.salesTax = roundOff(tax)
+            this.salesTax = MyMath.roundOff(tax);
         }
 
     }

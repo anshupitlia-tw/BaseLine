@@ -20,13 +20,9 @@ public class MainClass {
                 basket.clear();
                 continue;
             }
-            else {
+            else if (!eachLine.equals("")){
                Goods good = processInputLine(eachLine);
-                try {
                     basket.addGood(good);
-                }catch(Exception e){
-                    System.out.println("Some Exception"); // need to add specifics
-                }
             }
 
 
@@ -42,6 +38,7 @@ public class MainClass {
         String nameOfGood = parts[0].substring(parts[0].indexOf(' ')+1);
         boolean isTaxable = nameOfGood.contains("chocolate") || nameOfGood.contains("book") || nameOfGood.contains("pills");
         //For now considering chocolate, book or pills to be the only words
-        return new Goods();
+        Goods good = new Goods(nameOfGood,price,qty,isImported,isTaxable);
+        return good;
     }
 }
