@@ -39,7 +39,8 @@ public class MainClass {
         boolean isImported=parts[0].contains("imported");
         int qty = Integer.parseInt(parts[0].substring(0,parts[0].indexOf(' ')));
         String nameOfGood = parts[0].substring(parts[0].indexOf(' ')+1);
-        boolean isTaxable = nameOfGood.contains("chocolate") || nameOfGood.contains("book") || nameOfGood.contains("pills");
+        boolean isTaxable = !(nameOfGood.contains("chocolate") || nameOfGood.contains("book") || nameOfGood.contains("pills"));
+        //System.out.println(nameOfGood+" "+ price+" "+ qty+" "+isImported+" "+isTaxable);
         //For now considering chocolate, book or pills to be the only words
         Goods good = new Goods(nameOfGood,price,qty,isImported,isTaxable);
         return good;
