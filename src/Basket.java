@@ -12,4 +12,7 @@ public class Basket {
     public Basket(){
 
     }
+    public void addGood(Goods g){
+        basket.add(g);
+    }
 }

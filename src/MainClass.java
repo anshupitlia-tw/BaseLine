@@ -14,12 +14,27 @@ public class MainClass {
         ArrayList<Basket> baskets = new ArrayList<Basket>();
         System.out.println("What all things you bought today. Finish it by saying That is it");
         while (!(eachLine=br.readLine()).equals("That is it")){
+            Basket basket;
             if (eachLine.contains("Input")){
-               Basket basket = new Basket();
+                basket = new Basket();
                 continue;
             }
+            else {
+               Goods good = processInputLine(eachLine);
+                try {
+                    basket.addGood(good);
+                }catch(Exception e){
+                    System.out.println("Some Exception"); // need to add specifics
+                }
+            }
+
+
 
         }
 
+    }
+    public static Goods processInputLine(String inputLine){
+        String[] parts = inputLine.split("at");
+        return new Goods();
     }
 }
