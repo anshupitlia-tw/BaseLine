@@ -13,6 +13,9 @@ public class Basket {
 
     }
     public void addGood(Goods g){
-        basket.add(g);
+        this.basket.add(g);
+    }
+    public void clear(){
+        this.basket.clear();
     }
 }

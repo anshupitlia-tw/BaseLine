@@ -15,7 +15,9 @@ public class Goods {
         this.isImported = isImported;
         this.isTaxable = isTaxable;
     }
+   public Goods(){
 
+   }
     public boolean isImported() {
         return isImported;
     }

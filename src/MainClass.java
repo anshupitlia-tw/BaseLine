@@ -13,10 +13,11 @@ public class MainClass {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<Basket> baskets = new ArrayList<Basket>();
         System.out.println("What all things you bought today. Finish it by saying That is it");
+        Basket basket = new Basket();
         while (!(eachLine=br.readLine()).equals("That is it")){
-            Basket basket;
             if (eachLine.contains("Input")){
-                basket = new Basket();
+                baskets.add(basket);
+                basket.clear();
                 continue;
             }
             else {
