@@ -35,7 +35,13 @@ public class MainClass {
 
     }
     public static Goods processInputLine(String inputLine){
-        String[] parts = inputLine.split("at");
+        String[] parts = inputLine.split("at ");
+        float price = Float.parseFloat(parts[1]);
+        boolean isImported=parts[0].contains("imported");
+        int qty = Integer.parseInt(parts[0].substring(0,parts[0].indexOf(' ')));
+        String nameOfGood = parts[0].substring(parts[0].indexOf(' ')+1);
+        boolean isTaxable = nameOfGood.contains("chocolate") || nameOfGood.contains("book") || nameOfGood.contains("pills");
+        //For now considering chocolate, book or pills to be the only words
         return new Goods();
     }
 }
