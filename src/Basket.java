@@ -15,7 +15,13 @@ public class Basket {
     public void addGood(Goods g){
         this.basket.add(g);
     }
+
     public void clear(){
         this.basket.clear();
+    }
+    public void display(){
+        for (Goods eachGood: basket){
+            System.out.println(eachGood.quantity + " " + eachGood.nameOfGood + ":" + eachGood.pricePerUnit+eachGood.salesTax);
+        }
     }
 }

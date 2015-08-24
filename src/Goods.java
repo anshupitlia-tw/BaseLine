@@ -7,7 +7,7 @@ public class Goods {
     boolean isImported;
     int quantity;
     boolean isTaxable;
-    float salesTax;
+    float salesTax = 0.0f;
     public Goods(String nameOfGood, float pricePerUnit, int quantity, boolean isImported, boolean isTaxable) {
         this.nameOfGood = nameOfGood;
         this.pricePerUnit = pricePerUnit;

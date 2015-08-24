@@ -24,11 +24,12 @@ public class MainClass {
                Goods good = processInputLine(eachLine);
                     basket.addGood(good);
             }
-
-
-
         }
+        //give output
 
+        for (Basket eachBasket : baskets){
+            eachBasket.display();
+        }
     }
     public static Goods processInputLine(String inputLine){
         String[] parts = inputLine.split("at ");
